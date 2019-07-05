@@ -1,0 +1,81 @@
+@import '../../assets/style/mixin.scss';
+.header{
+    width: 100%;
+    height: $headerH;
+    display: flex;
+    font-size: 0;
+    background:linear-gradient(4deg,$theme1,$theme2);
+    box-sizing: border-box;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 97;
+    .headerLogo{
+        @include center;
+        flex: 0 0 px2rem(180);
+        img{
+            width: 100%;
+        }
+    }
+    .headerMenu{
+        flex: 1;
+        @include left;
+        padding-left: px2rem(45);
+        font-size: px2rem(48);
+        flex-direction: column;
+        z-index: 99;
+        .menu{
+            width:px2rem(50);
+            margin-top:px2rem(30);
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .headerLoginBox{
+        flex: 1;
+        padding-right: px2rem(30);
+        @include right;
+        .box{
+            span{
+                display: inline-block;
+                font-size: px2rem(30);
+                padding: px2rem(8) px2rem(8);
+                border:px2rem(2) solid #fff;
+                margin-right: px2rem(25);
+                border-radius: px2rem(10);
+                color:#fff;
+                &:last-child{
+                    margin-right: 0;
+                }
+                &.login{
+                    color: #FF606D;
+                    background: #fff;
+                }
+            }
+                
+        }
+    }
+}
+
+.fade-enter,fade-appear {
+    opacity: 0;
+}
+.fade-enter-active,fade-appear-active {
+    opacity: 0.5;
+    transition: opacity .2s ease-in;
+} 
+.fade-enter-done {
+    opacity: 1;
+}
+//出场动画
+.fade-exit{
+    opacity: 1;
+}
+.fade-exit-active{
+    opacity: 0.5;
+    transition: opacity .2s ease-in;
+}
+.fade-exit-done {
+    opacity: 0;
+}

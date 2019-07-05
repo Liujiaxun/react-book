@@ -1,0 +1,45 @@
+@import '../../assets/style/mixin.scss';
+.book-app{
+    position: relative;
+    padding-top:$headerH;
+    height:100%;
+    width:100%;
+    overflow: hidden auto;
+    -webkit-overflow-scrolling: touch;
+    .back{
+        position: fixed;
+        height:100%;
+        width:100%;
+        background: rgba(0,0,0,.6);
+        z-index:98;
+        top:0;
+    }
+}
+.menuList{
+    width: px2rem(410);
+    height: px2rem(490);
+    background: #fff;
+    position: absolute;
+    top:$headerH;
+    left: 0;
+    box-shadow: 0 px2rem(3) px2rem(10) rgba(0,0,0,.4);
+    z-index:99;
+    .link{
+        width: 100%;
+        height: px2rem(490/5);
+        border-bottom: px2rem(1) solid #000;
+        line-height: px2rem(490/5);
+        font-size: px2rem(40);
+        padding-left:$padding;
+        &:last-child{
+            border-bottom:0;
+        }
+        a{
+            color:#333;
+            font-weight: 500;
+            display: inline-block;
+            width:100%;
+            height: 100%;
+        }
+    }
+}

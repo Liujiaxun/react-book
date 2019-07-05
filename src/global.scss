@@ -1,0 +1,176 @@
+@import './assets/style/reset.scss';
+@import './assets/style/mixin.scss';
+html,body,#root{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    user-select: none;
+}
+.modal{
+    width:px2rem(587);
+    height:px2rem(420);
+    border-radius: px2rem(60) px2rem(70) px2rem(20) px2rem(20);
+    background: #ffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: px2rem(-(560/2));
+    margin-top: px2rem(-(420/2));
+    box-shadow: 0 0 px2rem(20) rgba(0,0,0,.5);
+    z-index: 99;
+    .modal-header{
+        width: 100%;
+        height: px2rem(150);
+        position: relative;
+        .headerImg{
+            width:100%;
+            position: absolute;
+            top:px2rem(-40)
+        }
+        .close{
+            width: px2rem(48);
+            height: px2rem(48);
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #ffff;
+            position: absolute;
+            top:0;
+            right: 0;
+            cursor: pointer;
+            img{
+                width: 100%;
+                height: 100%;
+                vertical-align: top;
+            }
+        }
+    }
+    .modal-body{
+        width: 100%;
+        height: px2rem(270);
+        font-size: px2rem(24);
+        .hintSpan{
+            font-size: px2rem(50);
+            color:$theme1;
+            text-align: center;
+            padding: px2rem(45) 0;
+        }
+        .btn{
+            @include center;
+            position: relative;
+            .btn-regis{
+                color:#fff;
+                background: $theme1;
+                padding: px2rem(20) px2rem(40);
+                border-radius: px2rem(25);
+                font-size:px2rem(36)
+            }
+            .btn-has{
+                position: absolute;
+                right: px2rem(100);
+                font-size: px2rem(24);
+                color:#666;
+                text-decoration: underline;
+                bottom: px2rem(10)
+            }
+        }
+        .form{
+            padding:$padding;
+            .formItem{
+                display: flex;
+                height: px2rem(60);
+                margin-bottom: px2rem(30);
+                &:last-child{
+                    margin: 0;
+                }
+                .formLable{
+                    flex: 0 0 px2rem(170);
+                    font-size: px2rem(32);
+                    text-align: right;
+                    line-height: px2rem(60);
+                    padding-right: px2rem(30);
+                }
+                .formInput{
+                    flex: 1;
+                    font-size: px2rem(32);
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        border: px2rem(1) solid #666;
+                        font-size: px2rem(25);
+                        padding-left: px2rem(10)
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.hotCard{
+    width: 100%;
+    height: px2rem(490);
+    border-top:px2rem(2) solid $theme1;
+    position: relative;
+    &.hasMarginTop{
+        margin-top:px2rem(55);
+    }
+    .hot-body{
+        width: 100%;
+        height: px2rem(432);
+        z-index: 2;
+        padding: $padding $padding2;
+        background: #fff;
+        position: relative;
+        .hot-item{
+            width:100%;
+            height:  px2rem(432)!important;
+            overflow: hidden;
+            display: flex;
+            a{
+                display: inline-block;
+                width:100%;
+                height: 100%;
+                margin:0 px2rem(5);
+                text-align: center;
+                img{
+                    width: 100%;
+                    height: px2rem(320);
+                }
+                .name{
+                    font-size: px2rem(28);
+                    padding:px2rem(18) 0;
+                    font-weight: bold;
+                    color:#333;
+                }
+                .version{
+                    color:#999;
+                }
+            }
+        }
+    }
+    .hot-title{
+        border-radius: px2rem(30);
+        border:px2rem(2) solid $theme1;
+        padding: px2rem(10) px2rem(20);
+        display: flex;
+        width: px2rem(210);
+        border-bottom: none;
+        position: absolute;
+        top: px2rem(-45);
+        left: px2rem(50);
+        background:#fff;
+        .icon{
+            width: px2rem(19*1.5);
+            height: px2rem(21*1.5);
+            margin-right: px2rem(10);
+            img{
+                width: 100%;height: 100%;
+            }
+        }
+        .name{
+            font-size: px2rem(30);
+            color:$theme1;
+            font-weight: 700;
+        }
+    }
+}
