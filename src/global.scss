@@ -49,6 +49,26 @@ html,body,#root{
         width: 100%;
         height: px2rem(270);
         font-size: px2rem(24);
+        .loginsSpan{
+            width: px2rem(496);
+            height: px2rem(144);
+            margin: px2rem(20) auto;
+            text-align: center;
+            .span{
+                font-size:px2rem(28);
+                font-weight:400;
+                padding: px2rem(40) 0;
+                color: $theme1;
+            }
+            .findPassword{
+                text-decoration: underline;
+                color:#999;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
         .hintSpan{
             font-size: px2rem(50);
             color:$theme1;
@@ -171,6 +191,76 @@ html,body,#root{
             font-size: px2rem(30);
             color:$theme1;
             font-weight: 700;
+        }
+    }
+}
+.app-contact{
+    width: 100%;
+    height: 100%;
+    padding:$padding;
+    position: relative;
+    .title{
+        font-size: px2rem(32);
+        text-align: center;
+        margin-bottom: .8rem;
+    }
+    .email,.kefu{
+        font-size: px2rem(30);
+        padding:px2rem(24) 0;
+        padding-left: 1.5rem;
+        a{
+            color:$theme1;
+            padding: px2rem(6) px2rem(10);
+            border: px2rem(2) solid $theme1;
+            border-radius: px2rem(30)
+        }
+    }
+    .input{
+        width: px2rem(547);
+        height: px2rem(423);
+        border: px2rem(2) solid $theme1;
+        margin:px2rem(50) auto;
+        border-radius: px2rem(15); 
+        padding-top:px2rem(48);
+        margin-top:px2rem(130);
+        position: relative;
+        .btn{
+            display: inline-block;
+            width: px2rem(184);
+            height: px2rem(53);
+            line-height: px2rem(53);
+            color:#fff;
+            background: $theme1;
+            text-align: center;
+            border-radius: px2rem(40);
+            font-size: px2rem(36);
+            position: absolute;
+            bottom:px2rem(-80);
+            right: 0; 
+        }
+        .input-header{
+            width: px2rem(350);height: px2rem(102);position: absolute;top:px2rem(-56);
+            img{
+                width: 100%;height: 100%;
+            }
+        }
+        textarea{
+            width: 95%;height:95%;
+            font-size: px2rem(32);
+            display: inline-block;
+            margin:0 auto;
+            padding-left: px2rem(13);
+            border:0;
+        }
+    }
+    .footer{
+        width: 100%;
+        height: px2rem(241);
+        position: absolute;
+        bottom:0;
+        left:0;
+        img{
+            width: 100%;height: 100%;
         }
     }
 }

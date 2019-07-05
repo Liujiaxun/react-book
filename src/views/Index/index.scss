@@ -31,13 +31,14 @@
         }
     }
 }
-.am-pull-to-refresh-down .am-pull-to-refresh-indicator{
-    margin-top: px2rem(-60)!important;  
-    height: px2rem(50)!important; 
-    z-index: 100 !important;
-    svg{
-        width: px2rem(50)!important;
-        height: px2rem(50)!important;
-        // margin-top:px2rem(40)
+    .am-pull-to-refresh-down .am-pull-to-refresh-indicator{
+        margin-top: px2rem(-60)!important;  
+        height: px2rem(50)!important; 
+        z-index: 100 !important;
+        font-size: px2rem(24);
+        svg{
+            width: px2rem(50)!important;
+            height: px2rem(50)!important;
+            // margin-top:px2rem(40)
+        }
     }
-}

@@ -6,7 +6,6 @@ const initState = {
 }
 
 export default (state=initState, actions) => {
-    console.log(state)
     switch(actions.type){
         case 'toggloMenuShow': 
             return {

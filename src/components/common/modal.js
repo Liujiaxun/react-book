@@ -99,8 +99,10 @@ export function LoginsModal({isShowLoginsModal,toggleClose,loginSuccess}){
                 </div>
             </div>):(
                 <div className='modal-body'>
-                    <div>
-                        <img />
+                    <div className='loginsSpan'>
+                        <img src={LoginError} alt='' />
+                        <p className='span'>请点击任何一处重试或找回您的密码</p>
+                        <span className='findPassword'> 忘记密码 </span>
                     </div>
                 </div>
             )

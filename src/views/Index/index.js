@@ -43,6 +43,7 @@ class Index extends React.Component{
         return (
             (<div className='app-index' id='appIndex'>
                 <PullToRefresh
+                className='pullR'
                   damping={300}
                   distanceToRefresh={100}
                   ref={el => this.ptr = el}
@@ -71,7 +72,7 @@ class Index extends React.Component{
     }
 }
 
-export default Index;
+export default connect()(Index);
 
 function Bar(props){
     return (
@@ -92,7 +93,7 @@ function Bar(props){
                     漫画
                 </div>
             </Link>
-            <Link to='/index' className='bars-item'>
+            <Link to='/mappic' className='bars-item'>
                 <div className='bars-icon'>
                     <img src={Picm}  alt=''/>
                 </div>

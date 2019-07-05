@@ -6,9 +6,11 @@ import { toggloMenuShow, toggloRegisterModal,toggloLoginModal } from '../../stor
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'react-router-dom';
 import { RegisterModal, LoginsModal } from '../../components/common/modal'
-import {Route,Redirect} from 'react-router-dom';
-import Index from '../Index'
-import {notFind404} from '../notFind/index'
+import {Route,Redirect,Switch} from 'react-router-dom';
+import Index from '../Index';
+import Contact from '../Contact';
+import MapPic from '../MapPic';
+import {notFind404} from '../notFind/index';
 class Home extends React.Component{
     constructor(props){
         super(props);
@@ -28,13 +30,16 @@ class Home extends React.Component{
         this.props.toggloLoginModal(false);
     }
     render(){
-        console.log(this.props)
         const { isShowMenu,toggleMenu,backShow,isShowRegisterModal, isShowLoginsModal,isRegisterSuccess} = this.props;
         return (
             <div className='book-app'>
-                <Route exact path="/index" component={Index}/>
-                <Redirect from='/' to='/index'></Redirect>
-                <Route  component={notFind404}/>
+                <Switch>
+                    <Route  path="/index" component={Index}/>
+                    <Redirect exact from='/' to='/index'></Redirect>
+                    <Route path="/mappic" component={MapPic}/>
+                    <Route path="/contact" component={Contact}/>
+                    <Route  path="*"  component={notFind404}/>
+                </Switch>
                 {
                     /* back-mubu */
                     backShow ? <div className='back' onClick={() => this.toggleBack(false) }></div>:null
@@ -66,13 +71,13 @@ const MenuList = props => {
                     <Link to='/index123123' > 小说区 </Link>
                 </div>
                 <div className='link'>
-                    <Link to='/index' > 贴图区 </Link>
+                    <Link to='/mappic' > 贴图区 </Link>
                 </div>
                 <div className='link'>
                     <Link to='/index' > 漫画区 </Link>
                 </div>
                 <div className='link'>
-                    <Link to='/index' > 联系我们 </Link>
+                    <Link to='/contact' > 联系我们 </Link>
                 </div>
             </div> : <div></div>
     )
