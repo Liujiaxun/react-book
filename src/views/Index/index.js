@@ -43,7 +43,6 @@ class Index extends React.Component{
         return (
             (<div className='app-index' id='appIndex'>
                 <PullToRefresh
-                className='pullR'
                   damping={300}
                   distanceToRefresh={100}
                   ref={el => this.ptr = el}
@@ -60,7 +59,7 @@ class Index extends React.Component{
                     }, 10000);
                   }}
                 >
-                <div style={this.state.refreshing ? {paddingTop:'10px'}:{}}>
+                <div style={this.state.refreshing ? {paddingTop:'10px'}:{paddingTop:'10px'}}>
                     <Banner imgHeight={200} data={['AiyWuByWklrrUDlFignR', 'TekJlZRVCjLFexlOCuWn', 'IJOtIlfsYdTyaDTRVrLI']} />
                     <Bar/>
                     <HotCard title='热门漫画' data={this.state.manhuaData}/>
@@ -77,7 +76,7 @@ export default connect()(Index);
 function Bar(props){
     return (
         <div className='bars'>
-            <Link to='/index' className='bars-item'>
+            <Link to='/book' className='bars-item'>
                 <div className='bars-icon sm'>
                     <img src={Book}  alt=''/>
                 </div>

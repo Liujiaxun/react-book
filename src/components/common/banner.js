@@ -6,7 +6,8 @@ export default function Banner(props){
     return (
         <Carousel
           autoplay={false}
-          infinite>
+          infinite
+          style={{height:(props.height/100)+'rem '}}>
           {props.data ? props.data.map(val => (
             <Link
               key={val}
